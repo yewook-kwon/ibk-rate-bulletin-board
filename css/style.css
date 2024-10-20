@@ -313,6 +313,94 @@ table.tbl_type01 tbody td {
   background: #131517;
   border: 1px solid #1d1f22;
 }
+
+table.tbl_type01 tbody td.td_ap {
+  height: 33px;
+}
+table.tbl_type01 tbody td .ap_green {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+table.tbl_type01 tbody td .ap_green .ap {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: #339527;
+  border-radius: 99px;
+  position: relative;
+  box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.2),
+    inset -2px -2px 1px rgb(25, 90, 19, 0.4);
+  z-index: 3;
+}
+
+table.tbl_type01 tbody td .ap_green .ap2 {
+  width: 18px;
+  height: 18px;
+  background: #5db82e;
+  border-radius: 99px;
+  filter: blur(4px);
+  opacity: 0.5;
+  position: absolute;
+  z-index: 1;
+}
+
+table.tbl_type01 tbody td .ap_red {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  animation: blink 1.6s infinite;
+}
+
+/* 깜빡거리는 애니메이션 정의 */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1; /* 처음과 끝 상태에서는 완전히 보임 */
+  }
+  50% {
+    opacity: 0; /* 중간 상태에서는 투명해짐 */
+  }
+}
+
+table.tbl_type01 tbody td .ap_red .ap {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: #952927;
+  border-radius: 99px;
+  position: relative;
+  box-shadow: inset 1px 1px 2px rgba(171, 115, 46, 0.6),
+    inset -2px -2px 1px rgb(77, 27, 21, 0.4);
+  z-index: 3;
+}
+
+table.tbl_type01 tbody td .ap_red .ap2 {
+  width: 18px;
+  height: 18px;
+  background: #ee5d62;
+  border-radius: 99px;
+  filter: blur(4px);
+  opacity: 0.5;
+  position: absolute;
+  z-index: 1;
+}
+
+/* 
+table.tbl_type01 tbody td .ap_blur {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: #1e411e;
+  filter: blur(4px);
+  border-radius: 99px;
+  position: relative;
+  left: -6px;
+  top: -6px;
+  z-index: 1;
+} */
 table.tbl_type01 tbody th {
   background: #101113;
   border: 1px solid #1d1f22;
@@ -355,7 +443,7 @@ table.tbl_type03 {
 }
 table.tbl_type03 thead th {
   background: #000;
-  border: 1px solid #1d1f22;  
+  border: 1px solid #1d1f22;
   color: #7a7a7a;
   height: 42px;
 }
@@ -392,51 +480,49 @@ table.tbl_type03 tbody td .lang_thumb {
   overflow: hidden;
 }
 
-table.tbl_type03 tbody td.eur .lang_thumb{
-    background: url(../img/lang_img.png) no-repeat 0 -51px;
+table.tbl_type03 tbody td.eur .lang_thumb {
+  background: url(../img/lang_img.png) no-repeat 0 -51px;
 }
 
-table.tbl_type03 tbody td.cny .lang_thumb{
-    background: url(../img/lang_img.png) no-repeat 0 -102px;
+table.tbl_type03 tbody td.cny .lang_thumb {
+  background: url(../img/lang_img.png) no-repeat 0 -102px;
 }
-table.tbl_type03 tbody td.jpy .lang_thumb{
-    background: url(../img/lang_img.png) no-repeat 0 -154px;
+table.tbl_type03 tbody td.jpy .lang_thumb {
+  background: url(../img/lang_img.png) no-repeat 0 -154px;
 }
-table.tbl_type03 tbody td.gbp .lang_thumb{
-    background: url(../img/lang_img.png) no-repeat 0 -201px;
+table.tbl_type03 tbody td.gbp .lang_thumb {
+  background: url(../img/lang_img.png) no-repeat 0 -201px;
 }
-table.tbl_type03 tbody td.cad .lang_thumb{
-    background: url(../img/lang_img.png) no-repeat 0 -251px;
+table.tbl_type03 tbody td.cad .lang_thumb {
+  background: url(../img/lang_img.png) no-repeat 0 -251px;
 }
-table.tbl_type03 tbody td.vdn .lang_thumb{
-    background: url(../img/lang_img.png) no-repeat 0 -305px;
+table.tbl_type03 tbody td.vdn .lang_thumb {
+  background: url(../img/lang_img.png) no-repeat 0 -305px;
 }
-table.tbl_type03 tbody td.chf .lang_thumb{
-    background: url(../img/lang_img.png) no-repeat 0 -356px;
+table.tbl_type03 tbody td.chf .lang_thumb {
+  background: url(../img/lang_img.png) no-repeat 0 -356px;
 }
-table.tbl_type03 tbody td.hkd .lang_thumb{
-    background: url(../img/lang_img.png) no-repeat 0 -407px;
+table.tbl_type03 tbody td.hkd .lang_thumb {
+  background: url(../img/lang_img.png) no-repeat 0 -407px;
 }
-table.tbl_type03 tbody td.nzd .lang_thumb{
-    background: url(../img/lang_img.png) no-repeat 0 -457px;
+table.tbl_type03 tbody td.nzd .lang_thumb {
+  background: url(../img/lang_img.png) no-repeat 0 -457px;
 }
-table.tbl_type03 tbody td.sgd .lang_thumb{
-    background: url(../img/lang_img.png) no-repeat 0 -507px;
+table.tbl_type03 tbody td.sgd .lang_thumb {
+  background: url(../img/lang_img.png) no-repeat 0 -507px;
 }
-table.tbl_type03 tbody td.thb .lang_thumb{
-    background: url(../img/lang_img.png) no-repeat 0 -557px;
+table.tbl_type03 tbody td.thb .lang_thumb {
+  background: url(../img/lang_img.png) no-repeat 0 -557px;
 }
-table.tbl_type03 tbody td.ang .lang_thumb{
-    background: url(../img/lang_img.png) no-repeat 0 -607px
+table.tbl_type03 tbody td.ang .lang_thumb {
+  background: url(../img/lang_img.png) no-repeat 0 -607px;
 }
-table.tbl_type03 tbody td.frf .lang_thumb{
-    background: url(../img/lang_img.png) no-repeat 0 -657px;
+table.tbl_type03 tbody td.frf .lang_thumb {
+  background: url(../img/lang_img.png) no-repeat 0 -657px;
 }
-table.tbl_type03 tbody td.irr .lang_thumb{
-    background: url(../img/lang_img.png) no-repeat 0 -712px;
+table.tbl_type03 tbody td.irr .lang_thumb {
+  background: url(../img/lang_img.png) no-repeat 0 -712px;
 }
-
-
 
 table.tbl_type03 tbody th {
   background: #101113;
@@ -640,8 +726,8 @@ table .color_navy {
   width: 31px;
   height: 17px;
   border-radius: 2px;
-  justify-content: center;
-  align-items: center;
+  padding: 1px 4px;
+  box-sizing: border-box;
   font-weight: 400;
 }
 

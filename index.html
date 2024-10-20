@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>환율게시판 전국 종합관제</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="fonts" href="./css/pretendard.css">
+    <script src="./js/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+</head>
+
+<body>
+    <div id="rate_wrap">
+        <div class="nav_wrap">
+            <h1 class="logo">
+                <img src="./img/logo.png" alt="로고" />
+                <span class="title ">환율게시판 전국 종합관제</span>
+            </h1>
+            <div class="time_box">
+                <div class="clock">
+                    <span class="date"></span>
+                    <span class="time"></span>
+                    <span class="ampm">AM</span>
+                </div>
+            </div>
+        </div>
+        <div class="cont_wrap">
+            <div class="box_wrap">
+                <h2 class="cont_tit">Resource Monitoring </h2>
+                <ul class="res_list">
+                    <li>
+                        <i class="total_ico"><img src="./img/total_ico.png" alt="total"></i>
+                        <p>Total</p>
+                        <div class="num">725</div>
+                    </li>
+                    <li>
+                        <p>정 상</p>
+                        <div class="num">722</div>
+                    </li>
+                    <li>
+                        <p>장 애</p>
+                        <div class="num">1</div>
+                    </li>
+                    <li>
+                        <p>경 고</p>
+                        <div class="num">1</div>
+                    </li>
+                    <li>
+                        <p>작업중</p>
+                        <div class="num">1</div>
+                    </li>
+                </ul>
+                <div class="box_row">
+                    <div class="box">
+                        <h3 class="box_tit">AP#1 Usage - (192.168.31.7) </h3>
+                        <h4 class="box_col_tit">System Usage %</h4>
+                        <div class="chart_wrap">
+                            <div class="chart">
+                                <canvas id="myChart"></canvas>
+
+                                <ul>
+                                    <ul class="data_tit">
+                                        <li>min</li>
+                                        <li>max</li>
+                                        <li>current</li>
+                                    </ul>
+                                    <li>
+                                        <div class="data">
+                                            <span class="color"></span>
+                                            <span class="name">CPU</span>
+                                        </div>
+                                        <ul class="data_num">
+                                            <li>10%</li>
+                                            <li>14%</li>
+                                            <li>9%</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="data">
+                                            <span class="color"></span>
+                                            <span class="name">MEM</span>
+                                        </div>
+                                        <ul class="data_num">
+                                            <li>10%</li>
+                                            <li>14%</li>
+                                            <li>9%</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="data">
+                                            <span class="color"></span>
+                                            <span class="name">HDD</span>
+                                        </div>
+                                        <ul class="data_num">
+                                            <li>10%</li>
+                                            <li>14%</li>
+                                            <li>9%</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="data">
+                                            <span class="color"></span>
+                                            <span class="name">NET</span>
+                                        </div>
+                                        <ul class="data_num">
+                                            <li>10%</li>
+                                            <li>14%</li>
+                                            <li>9%</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <h3 class="box_tit">AP#2 Usage - (192.168.31.8)</h3>
+                        <h4 class="box_col_tit">System Usage %</h4>
+                        <div class="chart_wrap">
+                            <div class="chart">
+                                <canvas id="myChart2"></canvas>
+
+                                <ul>
+                                    <ul class="data_tit">
+                                        <li>min</li>
+                                        <li>max</li>
+                                        <li>current</li>
+                                    </ul>
+                                    <li>
+                                        <div class="data">
+                                            <span class="color"></span>
+                                            <span class="name">CPU</span>
+                                        </div>
+                                        <ul class="data_num">
+                                            <li>10%</li>
+                                            <li>14%</li>
+                                            <li>9%</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="data">
+                                            <span class="color"></span>
+                                            <span class="name">MEM</span>
+                                        </div>
+                                        <ul class="data_num">
+                                            <li>10%</li>
+                                            <li>14%</li>
+                                            <li>9%</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="data">
+                                            <span class="color"></span>
+                                            <span class="name">HDD</span>
+                                        </div>
+                                        <ul class="data_num">
+                                            <li>10%</li>
+                                            <li>14%</li>
+                                            <li>9%</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="data">
+                                            <span class="color"></span>
+                                            <span class="name">NET</span>
+                                        </div>
+                                        <ul class="data_num">
+                                            <li>10%</li>
+                                            <li>14%</li>
+                                            <li>9%</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <h3 class="box_tit">DB#1 Usage - (192.168.31.9)</h3>
+                        <h4 class="box_col_tit">System Usage %</h4>
+                        <div class="chart_wrap">
+                            <div class="chart">
+                                <canvas id="myChart3"></canvas>
+
+                                <ul>
+                                    <ul class="data_tit">
+                                        <li>min</li>
+                                        <li>max</li>
+                                        <li>current</li>
+                                    </ul>
+                                    <li>
+                                        <div class="data">
+                                            <span class="color"></span>
+                                            <span class="name">CPU</span>
+                                        </div>
+                                        <ul class="data_num">
+                                            <li>10%</li>
+                                            <li>14%</li>
+                                            <li>9%</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="data">
+                                            <span class="color"></span>
+                                            <span class="name">MEM</span>
+                                        </div>
+                                        <ul class="data_num">
+                                            <li>10%</li>
+                                            <li>14%</li>
+                                            <li>9%</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="data">
+                                            <span class="color"></span>
+                                            <span class="name">HDD</span>
+                                        </div>
+                                        <ul class="data_num">
+                                            <li>10%</li>
+                                            <li>14%</li>
+                                            <li>9%</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="data">
+                                            <span class="color"></span>
+                                            <span class="name">NET</span>
+                                        </div>
+                                        <ul class="data_num">
+                                            <li>10%</li>
+                                            <li>14%</li>
+                                            <li>9%</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <h3 class="box_tit">DB#2 Usage - (192.168.31.10)</h3>
+                        <h4 class="box_col_tit">System Usage %</h4>
+                        <div class="chart_wrap">
+                            <div class="chart">
+                                <canvas id="myChart4"></canvas>
+
+                                <ul>
+                                    <ul class="data_tit">
+                                        <li>min</li>
+                                        <li>max</li>
+                                        <li>current</li>
+                                    </ul>
+                                    <li>
+                                        <div class="data">
+                                            <span class="color"></span>
+                                            <span class="name">CPU</span>
+                                        </div>
+                                        <ul class="data_num">
+                                            <li>10%</li>
+                                            <li>14%</li>
+                                            <li>9%</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="data">
+                                            <span class="color"></span>
+                                            <span class="name">MEM</span>
+                                        </div>
+                                        <ul class="data_num">
+                                            <li>10%</li>
+                                            <li>14%</li>
+                                            <li>9%</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="data">
+                                            <span class="color"></span>
+                                            <span class="name">HDD</span>
+                                        </div>
+                                        <ul class="data_num">
+                                            <li>10%</li>
+                                            <li>14%</li>
+                                            <li>9%</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="data">
+                                            <span class="color"></span>
+                                            <span class="name">NET</span>
+                                        </div>
+                                        <ul class="data_num">
+                                            <li>10%</li>
+                                            <li>14%</li>
+                                            <li>9%</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="box_wrap">
+                <h2 class="cont_tit">System Process</h2>
+                <table class="tbl_type01">
+                    <thead>
+                        <tr>
+                            <th colspan="2">ifmon</th>
+                            <th colspan="2">ifpush</th>
+                            <th colspan="2">ifmanager</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>AP1</th>
+                            <th>AP2</th>
+                            <th>AP1</th>
+                            <th>AP2</th>
+                            <th>AP1</th>
+                            <th>AP2</th>
+                        </tr>
+                        <tr>
+                            <td><img src="./img/table_ap_green.png" alt="초록색"></td>
+                            <td><img src="./img/table_ap_green.png" alt="초록색"></td>
+                            <td><img src="./img/table_ap_green.png" alt="초록색"></td>
+                            <td><img src="./img/table_ap_green.png" alt="초록색"></td>
+                            <td><img src="./img/table_ap_green.png" alt="초록색"></td>
+                            <td><img src="./img/table_ap_green.png" alt="초록색"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="tbl_type01">
+                    <thead>
+                        <tr>
+                            <th colspan="2">ifmon</th>
+                            <th colspan="2">ifpush</th>
+                            <th colspan="2"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>AP1</th>
+                            <th>AP2</th>
+                            <th>AP1</th>
+                            <th>AP2</th>
+                            <th>AP1</th>
+                            <th>AP2</th>
+                        </tr>
+                        <tr>
+                            <td><img src="./img/table_ap_green.png" alt="초록색"></td>
+                            <td><img src="./img/table_ap_green.png" alt="초록색"></td>
+                            <td><img src="./img/table_ap_green.png" alt="초록색"></td>
+                            <td><img src="./img/table_ap_red.png" alt="레드"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2 class="cont_tit">WAS/DB 상태 모니터링</h2>
+                <table class="tbl_type02">
+                    <thead>
+                        <tr>
+                            <th colspan="2">WAS</th>
+                            <th colspan="2">DB</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>WAS1</th>
+                            <th>WAS2</th>
+                            <th>DB1</th>
+                            <th>DB2</th>
+                        </tr>
+                        <tr>
+                            <td class="color_green">ACTIVE</td>
+                            <td class="color_red">FAIL</td>
+                            <td class="color_green">ACTIVE</td>
+                            <td class="color_navy">Standby</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <ul class="graph_list">
+                    <li>
+                        <h2 class="cont_tit">Data Space</h2>
+                        <div class="data_space">
+                            <div class="bar_data"></div>
+                            <div class="data_txt">
+                                <p class="per">75%</p>
+                                <p class="gb"><span>7.5GB</span> / 10GB</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <h2 class="cont_tit">Index Space </h2>
+                        <div class="data_space space2">
+                            <div class="bar_data"></div>
+                            <div class="data_txt">
+                                <p class="per">91%</p>
+                                <p class="gb"><span>9.1GB</span> / 10GB</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <h2 class="cont_tit">DB Table Dead Lock</h2>
+                        <div class="space3">
+                            <table class="dead_lock">
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="lock">L</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="lock">L</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="td_none"></td>
+                                    <td class="td_none"></td>
+                                    <td class="td_none"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </li>
+                    <li>
+                        <h2 class="cont_tit">DB쿼리수행시간</h2>
+                        <div class="data_space space4">
+                            <!-- <div class="bar_data"></div> -->
+                            <div class="data_txt">
+                                <p class="per">58</p>
+                                <p class="gb">Millsecond</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="db_erro">
+                    <span class="tit">DB 에러로그 </span>
+                    <span>JDBC-15146</span>
+                </div>
+
+                <ul class="notice">
+                    <li>
+                        <span class="notice_tit"><i class="label">장애</i>종로영업점 1번 환율셋탑 장애 발생</span>
+                        <span class="notice_date">24.04.15</span>
+                    </li>
+                    <li>
+                        <span class="notice_tit"><i class="label">장애</i>서대문지점 1번 환율셋탑 장애 발생 </span>
+                        <span class="notice_date">24.04.15</span>
+                    </li>
+                    <li>
+                        <span class="notice_tit"><i class="label">장애</i>녹번지점 1번 환율셋탑 장애 발생 </span>
+                        <span class="notice_date">24.04.15</span>
+                    </li>
+                    <li>
+                        <span class="notice_tit"><i class="label">장애</i>서귀포지점 셋톱 1번 환율셋탑 장애 발생</span>
+                        <span class="notice_date">24.04.15</span>
+                    </li>
+
+                    <li class="warning">
+                        <span class="notice_tit "><i class="label">경고</i>서귀포지점 셋톱 1번 환율셋탑 장애 발생</span>
+                        <span class="notice_date">24.04.15</span>
+                    </li>
+                    <li class="warning">
+                        <span class="notice_tit "><i class="label">경고</i>서귀포지점 셋톱 1번 환율셋탑 장애 발생</span>
+                        <span class="notice_date">24.04.15</span>
+                    </li>
+                    <li class="warning">
+                        <span class="notice_tit "><i class="label">경고</i>서귀포지점 셋톱 1번 환율셋탑 장애 발생</span>
+                        <span class="notice_date">24.04.15</span>
+                    </li>
+                    <li class="warning">
+                        <span class="notice_tit "><i class="label">경고</i>서귀포지점 셋톱 1번 환율셋탑 장애 발생</span>
+                        <span class="notice_date">24.04.15</span>
+                    </li>
+                    <li class="warning">
+                        <span class="notice_tit "><i class="label">경고</i>서귀포지점 셋톱 1번 환율셋탑 장애 발생</span>
+                        <span class="notice_date">24.04.15</span>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="box_wrap">
+                <h2 class="cont_tit">Exchange Rate Monitoring</h2>
+                <div class="ex_rate_wrap">
+                    <table class="tbl_type04">
+                        <thead>
+                            <tr>
+                                <th>STB환율표출</th>
+                                <th>EAI통신</th>
+                                <th>환율서버</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>정상</td>
+                                <td>정상</td>
+                                <td>정상</td>
+                            </tr>
+                            <tr>
+                                <td>정상</td>
+                                <td>정상</td>
+                                <td class="obs">장애</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul class="ex_rate_info">
+                        <li>기준일 : 2024년 10월 18일</li>
+                        <li>14시58분00초</li>
+                        <li>(389회차)</li>
+                    </ul>
+                </div>
+
+                <table class="tbl_type03">
+                    <thead>
+                        <tr>
+                            <th>통 화</th>
+                            <th>사실 때 </th>
+                            <th>파실 때 </th>
+                            <th>매매기준율</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="thumb">
+                                <div class="lang_thumb_wrap">
+                                    <div class="lang_thumb">
+                                        
+                                    </div>
+                                    <span class="lang_name">미국</span>
+                                </div>
+                                
+                                <span class="unit">USD</span>
+                            </td>
+                            <td class="buy">1443.91</td>
+                            <td class="sell">1443.91</td>
+                            <td class="sale">1443.91</td>
+                        </tr>
+                        <tr>
+                            <td class="thumb eur">
+                                <div class="lang_thumb_wrap">
+                                    <div class="lang_thumb">
+                                        
+                                    </div>
+                                    <span class="lang_name">유럽연합</span>
+                                </div>
+                                
+                                <span class="unit">EUR</span>
+                            </td>
+                            <td class="buy">1443.91</td>
+                            <td class="sell">1443.91</td>
+                            <td class="sale">1443.91</td>
+                        </tr>
+                        <tr>
+                            <td class="thumb cny">
+                                <div class="lang_thumb_wrap">
+                                    <div class="lang_thumb">
+                                        
+                                    </div>
+                                    <span class="lang_name">중국</span>
+                                </div>
+                                
+                                <span class="unit">CNY</span>
+                            </td>
+                            <td class="buy">1443.91</td>
+                            <td class="sell">1443.91</td>
+                            <td class="sale">1443.91</td>
+                        </tr>
+                        <tr>
+                            <td class="thumb jpy">
+                                <div class="lang_thumb_wrap">
+                                    <div class="lang_thumb">
+                                        
+                                    </div>
+                                    <span class="lang_name">일본</span>
+                                </div>
+                                
+                                <span class="unit">JPY</span>
+                            </td>
+                            <td class="buy">1443.91</td>
+                            <td class="sell">1443.91</td>
+                            <td class="sale">1443.91</td>
+                        </tr>
+                        <tr>
+                            <td class="thumb gbp">
+                                <div class="lang_thumb_wrap">
+                                    <div class="lang_thumb">
+                                        
+                                    </div>
+                                    <span class="lang_name">영국</span>
+                                </div>
+                                
+                                <span class="unit">GBP</span>
+                            </td>
+                            <td class="buy">1443.91</td>
+                            <td class="sell">1443.91</td>
+                            <td class="sale">1443.91</td>
+                        </tr>
+                        <tr>
+                            <td class="thumb cad">
+                                <div class="lang_thumb_wrap">
+                                    <div class="lang_thumb">
+                                        
+                                    </div>
+                                    <span class="lang_name">캐나다</span>
+                                </div>
+                                
+                                <span class="unit">CAD</span>
+                            </td>
+                            <td class="buy">1443.91</td>
+                            <td class="sell">1443.91</td>
+                            <td class="sale">1443.91</td>
+                        </tr>
+                        <tr>
+                            <td class="thumb">
+                                <div class="lang_thumb_wrap">
+                                    <div class="lang_thumb">
+                                        
+                                    </div>
+                                    <span class="lang_name">호주</span>
+                                </div>
+                                
+                                <span class="unit">EUR</span>
+                            </td>
+                            <td class="buy">1443.91</td>
+                            <td class="sell">1443.91</td>
+                            <td class="sale">1443.91</td>
+                        </tr>
+                        <tr>
+                            <td class="thumb vdn">
+                                <div class="lang_thumb_wrap">
+                                    <div class="lang_thumb">
+                                        
+                                    </div>
+                                    <span class="lang_name">베트남</span>
+                                </div>
+                                
+                                <span class="unit">VDN</span>
+                            </td>
+                            <td class="buy">1443.91</td>
+                            <td class="sell">1443.91</td>
+                            <td class="sale">1443.91</td>
+                        </tr>
+                        <tr>
+                            <td class="thumb chf">
+                                <div class="lang_thumb_wrap">
+                                    <div class="lang_thumb">
+                                        
+                                    </div>
+                                    <span class="lang_name">스위스</span>
+                                </div>
+                                
+                                <span class="unit">CHF</span>
+                            </td>
+                            <td class="buy">1443.91</td>
+                            <td class="sell">1443.91</td>
+                            <td class="sale">1443.91</td>
+                        </tr>
+                        <tr>
+                            <td class="thumb hkd">
+                                <div class="lang_thumb_wrap">
+                                    <div class="lang_thumb">
+                                        
+                                    </div>
+                                    <span class="lang_name">홍콩</span>
+                                </div>
+                                
+                                <span class="unit">HKD</span>
+                            </td>
+                            <td class="buy">1443.91</td>
+                            <td class="sell">1443.91</td>
+                            <td class="sale">1443.91</td>
+                        </tr>
+                        <tr>
+                            <td class="thumb nzd">
+                                <div class="lang_thumb_wrap">
+                                    <div class="lang_thumb">
+                                        
+                                    </div>
+                                    <span class="lang_name">뉴질랜드</span>
+                                </div>
+                                
+                                <span class="unit">NZD</span>
+                            </td>
+                            <td class="buy">1443.91</td>
+                            <td class="sell">1443.91</td>
+                            <td class="sale">1443.91</td>
+                        </tr>
+                        <tr>
+                            <td class="thumb sgd">
+                                <div class="lang_thumb_wrap">
+                                    <div class="lang_thumb">
+                                        
+                                    </div>
+                                    <span class="lang_name">싱가포르</span>
+                                </div>
+                                
+                                <span class="unit">SGD</span>
+                            </td>
+                            <td class="buy">1443.91</td>
+                            <td class="sell">1443.91</td>
+                            <td class="sale">1443.91</td>
+                        </tr>
+                        <tr>
+                            <td class="thumb thb">
+                                <div class="lang_thumb_wrap">
+                                    <div class="lang_thumb">
+                                        
+                                    </div>
+                                    <span class="lang_name">태국</span>
+                                </div>
+                                
+                                <span class="unit">THB</span>
+                            </td>
+                            <td class="buy">1443.91</td>
+                            <td class="sell">1443.91</td>
+                            <td class="sale">1443.91</td>
+                        </tr>
+                        <tr>
+                            <td class="thumb ang">
+                                <div class="lang_thumb_wrap">
+                                    <div class="lang_thumb">
+                                        
+                                    </div>
+                                    <span class="lang_name">네덜란드</span>
+                                </div>
+                                
+                                <span class="unit">ANG</span>
+                            </td>
+                            <td class="buy">1443.91</td>
+                            <td class="sell">1443.91</td>
+                            <td class="sale">1443.91</td>
+                        </tr>
+                        <tr>
+                            <td class="thumb frf">
+                                <div class="lang_thumb_wrap">
+                                    <div class="lang_thumb">
+                                        
+                                    </div>
+                                    <span class="lang_name">프랑스</span>
+                                </div>
+                                
+                                <span class="unit">FRF</span>
+                            </td>
+                            <td class="buy">1443.91</td>
+                            <td class="sell">1443.91</td>
+                            <td class="sale">1443.91</td>
+                        </tr>
+                        <tr>
+                            <td class="thumb irr">
+                                <div class="lang_thumb_wrap">
+                                    <div class="lang_thumb">
+                                        
+                                    </div>
+                                    <span class="lang_name">이란</span>
+                                </div>
+                                
+                                <span class="unit">IRR</span>
+                            </td>
+                            <td class="buy">1443.91</td>
+                            <td class="sell">1443.91</td>
+                            <td class="sale">1443.91</td>
+                        </tr>
+                        
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/core.js"></script>
+
+
+</body>
+
+</html>

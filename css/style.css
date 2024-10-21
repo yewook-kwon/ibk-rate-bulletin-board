@@ -104,15 +104,19 @@ table {
   height: calc(100% - 36px);
   gap: 16px;
 }
+
 .cont_wrap .box_wrap {
   height: 100%;
 }
+
 .cont_wrap .box_wrap:nth-child(1) {
   grid-column: span 4 / span 4;
 }
 
 .cont_wrap .box_wrap:nth-child(2) {
   grid-column: span 3 / span 3;
+  container-type: inline-size;
+  container-name: box-cont;
 }
 
 .cont_wrap .box_wrap:nth-child(3) {
@@ -338,6 +342,7 @@ table.tbl_type01 thead th {
   border: 1px solid #1d1f22;
   padding: 6px;
   color: #7a7a7a;
+  width: 33.3333%;
 }
 
 table.tbl_type01 tbody td {
@@ -622,8 +627,8 @@ table .color_navy {
   display: flex;
   gap: 7px;
   width: 100%;
-  white-space: nowrap;
-  overflow: auto;
+  container-type: inline-size;
+  container-name: box-cont;
 }
 
 .graph_list li {
@@ -816,12 +821,12 @@ table .color_navy {
   font-size: 12px;
   color: #ffd584;
   background: #87000b;
-  display: inline-block;  
-  height: 17px;
+  display: inline-block;
   border-radius: 2px;
-  padding: 1px 4px;
+  padding: 2px 4px;
   box-sizing: border-box;
   font-weight: 400;
+  margin-right: 4px;
 }
 
 .notice li.warning .notice_tit {
@@ -884,7 +889,7 @@ table .color_navy {
 
 
 @media (max-width:1480px) {
-  
+
   .graph_list li {
     width: 100% !important;
   }
@@ -924,6 +929,30 @@ table .color_navy {
 }
 
 @container box-cont (max-width:460px) {
+  .graph_list li .data_space .data_txt {
+    gap: 4px;
+    justify-content: center
+  }
+
+  .graph_list li .data_space {
+    width: 100%;
+  }
+
+  .graph_list li .data_space {
+    border-radius: 4px;
+  }
+
+  .graph_list li {
+    width: 100% !important;
+  }
+
+  .box_wrap .cont_tit {
+    margin-top: 8px;
+  }
+
+  .graph_list {
+    flex-direction: column;
+  }
 
   .chart canvas {
     width: 100% !important;
@@ -961,4 +990,3 @@ table .color_navy {
     margin-right: 0;
   }
 }
-

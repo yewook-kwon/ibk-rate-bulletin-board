@@ -30,7 +30,7 @@ table {
   width: 100%;
   min-height: 100vh;
   height: 100%;
-  padding: 14px 24px 24px;
+  padding: 14px 24px;
   box-sizing: border-box;
 }
 
@@ -857,6 +857,7 @@ table .color_navy {
   color: #3aa1e4;
   height: 29px;
   width: 33.333%;
+  padding: 4px;box-sizing: border-box;
 }
 
 .tbl_type04 tbody td {
@@ -864,6 +865,7 @@ table .color_navy {
   color: #42cc32;
   text-align: center;
   height: 27px;
+  padding: 4px;box-sizing: border-box;
 }
 
 .tbl_type04 tbody td.obs {
@@ -912,6 +914,7 @@ table .color_navy {
   #rate_wrap {
     height: 100vh;
     overflow: auto;
+    
   }
 
   .cont_wrap {

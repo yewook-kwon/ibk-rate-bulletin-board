@@ -665,14 +665,14 @@ table .color_navy {
 }
 
 .graph_list li .data_space .data_txt {
-  position: relative;
+  position: relative;  
   z-index: 2;
   height: 100%;
   display: flex;
   flex-direction: column;
   gap: 12px;
   align-items: center;
-  justify-content: end;
+  justify-content: center;
   padding: 9px;
   box-sizing: border-box;
 }
@@ -681,14 +681,15 @@ table .color_navy {
   color: #87ce6f;
   font-size: 30px;
   font-weight: 700;
+  display: flex;align-items: end; gap: 4px;
 }
 
 .graph_list li .data_space .gb {
-  color: #6eb357;
+  color: #6eb357;font-weight: 400;
 }
 
 .graph_list li .data_space .gb span {
-  color: #87ce6f;
+  color: #87ce6f;font-weight: 400;
 }
 
 .graph_list li .space2 {
@@ -771,7 +772,9 @@ table .color_navy {
   color: #64b9b2;
   font-size: 36px;
 }
-
+.graph_list li .space4 .per span {
+  color: #69928f;font-size: 14px;margin-bottom: 6px;
+}
 .graph_list li .space4 .gb {
   color: #69928f;
 }

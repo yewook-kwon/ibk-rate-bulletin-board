@@ -713,7 +713,24 @@ table .color_navy {
 }
 
 .graph_list li .space3 {
-  background: none;
+  display: flex;gap: 4px;background: none;
+  
+}
+
+.graph_list li .space3 > div{
+  background: #09504a;width: 100%;height: 100%;
+  border-radius: 10px;
+  display: flex;flex-direction: column;justify-content: end; align-items: center;
+  padding-bottom: 12px;box-sizing: border-box;
+}
+
+.graph_list li .space3 > div .spa3_num {
+  font-size: 36px;color: #64b9b2;
+  font-weight: 700;
+}
+
+.graph_list li .space3 > div span {
+  font-size: 12px;font-weight: 400; color: #558d88;
 }
 
 .graph_list li .space3 .dead_lock {

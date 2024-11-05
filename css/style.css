@@ -360,7 +360,6 @@ table.tbl_type01 thead th {
   border: 1px solid #1d1f22;
   padding: 6px;
   color: #7a7a7a;
-  width: 33.3333%;
 }
 
 table.tbl_type01 tbody td {
@@ -946,12 +945,13 @@ table .color_navy {
 .tbl_type04 thead th {
   background: #1f2125;
   color: #3aa1e4;
-  height: 29px;
-  width: 33.333%;
+  height: 29px;  
   padding: 4px;
   box-sizing: border-box;
 }
-
+.tbl_type04 tbody th {
+  background: #0c2609;color: #44813d;font-weight: 400;
+}
 .tbl_type04 tbody td {
   background: #154210;
   color: #42cc32;

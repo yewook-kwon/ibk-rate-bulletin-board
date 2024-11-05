@@ -115,6 +115,7 @@ body {
   grid-template-columns: repeat(11, minmax(0, 1fr));
   height: 100%;
   gap: 16px;
+  overflow: auto;
 }
 
 /* .cont_wrap .box_wrap {
